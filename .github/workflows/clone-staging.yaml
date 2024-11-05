@@ -31,6 +31,9 @@ jobs:
             sudo apt-get install cf8-cli postgresql-client
             # install cg-manage-rds tool
             pip install git+https://github.com/cloud-gov/cg-manage-rds.git
+
+            echo "$CF_USERNAME"
+            echo "$CF_PASSWORD"
             
             # Authenticate and target CF org and space.
             cf api api.fr.cloud.gov
