@@ -29,10 +29,7 @@ jobs:
             
             sudo apt-get update
             sudo apt-get install cf8-cli
-
-            # make sure postgresql version is up to date and there are not version conflicts
-            sudo apt-get remove postgresql postgresql-common
-            sudo apt list -a postgresql
+            
             pg_dump --version
             # # install cg-manage-rds tool
             # pip install git+https://github.com/cloud-gov/cg-manage-rds.git
