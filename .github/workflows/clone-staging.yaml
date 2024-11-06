@@ -16,7 +16,7 @@ env:
 
 jobs:
   clone-database:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     env:
       CF_USERNAME: ${{ secrets.CF_MS_USERNAME }}
       CF_PASSWORD: ${{ secrets.CF_MS_PASSWORD }}
