@@ -29,6 +29,7 @@ jobs:
             
             sudo apt-get update
             sudo apt-get install cf8-cli postgresql-client-common
+            find /usr/ -name pg_dump
             pg_dump --version
             # install cg-manage-rds tool
             pip install git+https://github.com/cloud-gov/cg-manage-rds.git
