@@ -31,6 +31,7 @@ jobs:
             sudo apt-get install cf8-cli
             
             pg_dump --version
+            exit 1
             # # install cg-manage-rds tool
             # pip install git+https://github.com/cloud-gov/cg-manage-rds.git
             
@@ -46,4 +47,8 @@ jobs:
             # cg-manage-rds clone getgov-$DESTINATION_ENVIRONMENT-database getgov-$SOURCE_ENVIRONMENT-database
             
             # # unshare the service
+        - name: cleanup
+          if: always()
+          run: |
+            echo "cleanup step"
             # cf unshare-service getgov-$DESTINATION_ENVIRONMENT-database -s $SOURCE_ENVIRONMENT
